@@ -18,8 +18,8 @@ I implemented [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_G
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/SamarthPyati/Cellular_Automata_In_Raylib.git
-   cd Cellular_Automata_In_RayLib
+   git clone https://github.com/SamarthPyati/game-of-life.git
+   cd game-of-life
    ```
 
 2. **Install Raylib:**
@@ -28,12 +28,12 @@ I implemented [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_G
 3. **Compile the Code:**
    - You can compile the project using a C compiler. If you're using GCC on Windows, use the following command:
    ```bash
-   gcc -o cellular_automata gol.c -lraylib -lgdi32 -lopengl32 -lm
+   gcc -o gol gol.c -lraylib -lgdi32 -lopengl32 -lm
    ```
 
    - On linux / mac operating systems: 
     ```bash
-   gcc $(pkg-config --libs --cflags raylib) -lm -o cellular_automata gol.c 
+   gcc $(pkg-config --libs --cflags raylib) -lm -o gol gol.c 
    ```  
 
 ## Usage
@@ -42,7 +42,7 @@ I implemented [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_G
    - Build the program.
    - Execute the compiled binary:
      ```bash
-     ./cellular_automata
+     ./gol
      ```
 
 2. **Controls:**
@@ -58,6 +58,7 @@ I implemented [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_G
    | Z               | Reset camera position and rotation |
    | Left Shift + Z  | Reset camera position, rotation, and zoom |
    | B               | Switch the Rules   |
+   | M               | Toggle Music |
    | Esc             | Quit the program | 
 
 ## Upcoming Features

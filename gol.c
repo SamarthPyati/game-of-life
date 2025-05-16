@@ -1,12 +1,20 @@
-/*
-** A Simple Implementation of Cellular Automata Simulation
-    consisting Conway`s game of life & Brain`s Brain. **
-    - Author: Samarth Sanjay Pyati
-    - Date: 23-07-2024
-*/
+/**
+ * @file gol.c
+ * @author Samarth Pyati 
+ * 
+ * @brief A Simple Implementation of Cellular Automata Simulation
+ * consisting Conway`s game of life & Brain`s Brain. 
+ * 
+ * @version 0.1
+ * @date 23-07-2024
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <time.h>
 #include "raylib.h"
 #include "raymath.h" 
@@ -59,7 +67,7 @@ typedef struct
 #define ZOOM_MAX 10.0f
 
 // HELPER MACRO
-#define ARRAY_LEN(xs) (sizeof(xs) / sizeof(xs[0]))
+#define ArrayLen(xs) (sizeof(xs) / sizeof(xs[0]))
 
 
 // PROTOTYPES
@@ -92,6 +100,7 @@ const char *musicPaths[3] = {
 
 unsigned int musicCount = 3;
 unsigned int currentMusicIndex = 0;
+bool musicPaused = false;
 
 int main(void)
 {   
@@ -131,7 +140,7 @@ int main(void)
         // Pause/Resume music playing
         if (IsKeyPressed(KEY_SPACE))
         {
-            if (paused) PauseMusicStream(music);
+            if (musicPaused) PauseMusicStream(music);
             else ResumeMusicStream(music);
         }
 
